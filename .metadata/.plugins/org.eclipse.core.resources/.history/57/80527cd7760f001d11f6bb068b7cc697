@@ -22,22 +22,9 @@ public class JavaATM1 {
 		int n5 = amount /5;
 		amount %=5;
 		
-		int n2 = amount /2;
-		amount %=2;
-		
-		int n1 = amount /1;
-		
-		
 		
 		System.out.println("Notas de R$ 100,00: "+n100);
-		System.out.println("Notas de R$ 50,00: "+n50);
-		System.out.println("Notas de R$ 20,00: "+n20);
-		System.out.println("Notas de R$ 10,00: "+n10);
-		System.out.println("Notas de R$ 5,00: "+n5);
-		System.out.println("Notas de R$ 2,00: "+n2);
-		System.out.println("Notas de R$ 1,00: "+n1);
-		
-		
+		System.out.println("Resto: " + amount);
 
 	}
 
