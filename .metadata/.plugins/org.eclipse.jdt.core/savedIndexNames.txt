@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\luked\OneDrive\Área de Trabalho\Projects\TimTec\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3268282335.index
+2612295411.index
