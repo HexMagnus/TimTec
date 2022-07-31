@@ -13,13 +13,8 @@ public class JavaATM2 {
 		
 		
 		for(int i=0; i < billValues.length;i++) {
-			
-			numberOfBills[i] = amount / billValues[i];
-			amount %= billValues[i];
-				
-			
-			System.out.println("notas de R$ " + billValues[1] + ": " +
-					numberOfBills[i]);
+			System.out.println(billValues[i]);
+				// TODO Auto-generated method stub
 
 			}
 		
