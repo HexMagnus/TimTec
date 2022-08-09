@@ -34,7 +34,7 @@ public class JavaATM3 {
 		
 		for (int value : billValues) {
 			numberOfBills.add (amount / value);
-			amount %= value;
+			amount %= value
 					}
 		
 		return numberOfBills;

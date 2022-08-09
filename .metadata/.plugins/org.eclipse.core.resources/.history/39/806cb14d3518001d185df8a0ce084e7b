@@ -33,8 +33,8 @@ public class JavaATM3 {
 		ArrayList<Integer> numberOfBills = new ArrayList<>();
 		
 		for (int value : billValues) {
-			numberOfBills.add (amount / value);
-			amount %= value;
+			numberOfBills.add amount / billValues.get(i);
+			amount %= billValues.get(i);
 					}
 		
 		return numberOfBills;
