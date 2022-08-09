@@ -22,7 +22,7 @@ public class JavaATM3 {
 				+"R$ 50, R$ 20, R$ 10, R$ 5, R$ 2, e R$ 1");
 		
 		
-		for(int i = 0; i < numberOfBills.size();i++){
+		for(int i = 0; i < numberOfBills.length;i++){
 			System.out.println("Notas de R$ "+ billValues[i] + ": "
 					+ numberOfBills[i]);
 		}
