@@ -1,8 +1,9 @@
 package JavaATM3;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class JavaATM3 {
 
@@ -12,32 +13,39 @@ public class JavaATM3 {
 		
 	    List<Integer> billValues = Arrays.asList(100, 50, 20, 10, 5, 2, 1);
 		
-		List<Integer> numberOfBills = getBillDistribution(amount, billValues);
-		printOUtput (amount, billValues, numberOfBills);
+		Map<Integer, Integer> distribution = getBillDistribution(amount, billValues);
+		printOutput (amount, distribution);
 
 	}
 	
-	public static void printOUtput(int amount, List<Integer> billValues, List<Integer> numberOfBills) {
+	public static void printOutput(int amount, Map<Integer, Integer> distribution) {
 		System.out.println("Dividindo R$ " + amount + " em notas de R$ 100, "
 				+"R$ 50, R$ 20, R$ 10, R$ 5, R$ 2, e R$ 1");
 		
 		
-		for(int i = 0; i < numberOfBills.size();i++){
-			System.out.println("Notas de R$ "+ billValues.get(i) + ": "
-					+ numberOfBills.get(i));
+		for (java.util.Map.Entry<Integer, Integer> e : distribution.entrySet()) {
+			int value = e.getKey();
+			int bills = e.getValue();
+			
+			System.out.println("Notas de R$ "+ value +"; " + bills);
+					
 		}
 		
 	}
 	
-	public static List <Integer> getBillDistribution(int amount, List <Integer> billValues) {
-		ArrayList<Integer> numberOfBills = new ArrayList<>();
+	public static Map <Integer, Integer> getBillDistribution(int amount, List <Integer> billValues) {
+		HashMap<Integer, Integer> distribution = new HashMap<>();
 		
 		for (int value : billValues) {
-			numberOfBills.add (amount / value);
+			//distribution.add (amount / value);
+			int bills = amount / value;
+			if (bills >0)
+				distribution.put(value, bills);
+			
 			amount %= value;
 					}
 		
-		return numberOfBills;
+		return distribution;
 	}
 
 }
